@@ -4,7 +4,7 @@
   <div class="container">
   	<div class="img_cont col-sm-3" ng-repeat="image in imagesFiltered" style="min-height:240px;">
   		      <img ng-src="data:image/png;base64,{{image.img}}" class="img_ls" style="max-width:100%;"/>
-      		  <h3>{{image.label}}</h3>
+      		  <h3 style="position:absolute; bottom:12px">{{image.label}}</h3>
   	</div>
   </div>
   </section>
