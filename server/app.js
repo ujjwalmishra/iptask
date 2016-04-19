@@ -12,6 +12,7 @@ var clientPath = path.join(__dirname, '../client');
 var buildPath = path.join(__dirname, '../client/build');    // for gulped files
 var indexHtmlPath = path.join(__dirname, './index.html');
 var nodePath = path.join(__dirname, '../node_modules');
+var uiTempPath = path.join(__dirname, '../node_modules/angular-bootstrap-npm/dist');
 var imagePath = path.join(__dirname, './images');
 /* 
 imgUpload doesn't use Bower by default. To use Bower,
@@ -25,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(clientPath));
 app.use(express.static(buildPath));
 app.use(express.static(nodePath));
+app.use(express.static(uiTempPath));
 app.use(express.static(imagePath));
 // app.use(express.static(bowerPath));
 
