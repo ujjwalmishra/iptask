@@ -25,4 +25,3 @@ startDbPromise.then(function () {
 
 
 module.exports = startDbPromise;
-mongodb://admin:black123@ds015750.mlab.com:15750/lrtask
