@@ -1,8 +1,6 @@
 app.controller('HomeController',['$scope', '$http', 'fileUpload', function($scope, $http, fileUpload) {
   	$scope.message = "";
     $scope.uploadFile = function(){
-    	console.log("Uploading files");
-        $scope.message = "Uploading...";
         var file = $scope.myFile;
         if(!file){
         	$scope.message = "Please choose a file"
@@ -11,10 +9,9 @@ app.controller('HomeController',['$scope', '$http', 'fileUpload', function($scop
         if(!label){
         	$scope.message = "Please Input a Label"
         }           
-        console.log('file is ' );
-        console.dir(file);
         var uploadUrl = "/api/modules/image";
-        if(file && label){
+        if(file && label){        
+        $scope.message = "Uploading...";    
         fileUpload.uploadFileToUrl(file, label, uploadUrl);
     	}
     };
