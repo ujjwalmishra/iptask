@@ -4,6 +4,10 @@ var dbName = "meaniscule-app";
 
 var DATABASE_URI = "mongodb://localhost:27017/" + dbName;
 
+if (process.env.NODE_ENV == 'production'){
+	DATABASE_URI = "mongodb://admin:black123@ds015750.mlab.com:15750/lrtask";
+}
+
 var mongoose = require('mongoose');
 var db = mongoose.connect(DATABASE_URI).connection;
 
@@ -21,4 +25,4 @@ startDbPromise.then(function () {
 
 
 module.exports = startDbPromise;
-
+mongodb://admin:black123@ds015750.mlab.com:15750/lrtask
