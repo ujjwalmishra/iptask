@@ -1,0 +1,19 @@
+<section id="modules">
+  <h1>Uploaded Images</h1>
+
+  <div class="container">
+  	<div class="img_cont col-sm-3" ng-repeat="image in imagesFiltered" style="width: 25%">
+  		      <img ng-src="data:image/png;base64,{{image.img}}" class="img_ls" style="max-width:100%;"/>
+      		  <h3>{{image.label}}</h3>
+  	</div>
+  </div>
+  </section>
+
+<section id="pagination">
+    <pagination 
+      ng-model="currentPage"
+      total-items="totalItem"
+      max-size="maxSize"  
+      boundary-links="true">
+    </pagination>
+</section>  
