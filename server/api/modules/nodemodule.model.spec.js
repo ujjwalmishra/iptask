@@ -1,4 +1,4 @@
-var dbURI = 'mongodb://localhost:27017/meaniscule-app-tests';
+var dbURI = 'mongodb://localhost:27017/imgUpload-app-tests';
 var clearDB = require('mocha-mongoose')(dbURI);
 
 var expect = require('chai').expect;

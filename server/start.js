@@ -5,7 +5,7 @@ var chalk = require('chalk');
 
 // Returns a promise from ./db/index.js
 var startDb = require('./db');
-var port = (process.env.PORT || 4546);
+var port = (process.env.PORT || 8000);
 var app;
   
 // Start the server
