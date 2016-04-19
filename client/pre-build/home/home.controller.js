@@ -2,6 +2,7 @@ app.controller('HomeController',['$scope', '$http', 'fileUpload', function($scop
   	$scope.message = "";
     $scope.uploadFile = function(){
     	console.log("Uploading files");
+        $scope.message = "Uploading...";
         var file = $scope.myFile;
         if(!file){
         	$scope.message = "Please choose a file"
